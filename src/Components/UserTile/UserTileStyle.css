@@ -3,7 +3,8 @@
     flex-direction: column;
     background-color: #95dada;
     border: 1px solid grey;
-    border-radius: 2px;
+    padding:10px;
+    border-radius: 25px;
     transition: transform 0.25s ease-out;
 }
 .UserTile:hover{
