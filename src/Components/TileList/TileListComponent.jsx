@@ -1,5 +1,5 @@
 import React from "react";
-import { UserTile } from "../UserTile/UserTileComponent";
+import UserTile from "../UserTile/UserTileComponent";
 import './TileListStyle.css';
 
 export const TileList=(props)=>{

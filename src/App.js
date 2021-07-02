@@ -7,34 +7,42 @@ class App extends Component{
   constructor(){
     super();
     this.state={
+      searchField:"",
       users:[
         {
           id:1,
-          name:"Shreejeet Praveen"
+          name:"Shreejeet Praveen",
+          sex:"male"
         },
         {
           id:2,
-          name:"Manisha Golane"
+          name:"Manisha Golane",
+          sex:"female"
         },
         {
           id:3,
-          name:"Debdeep Goswami"
+          name:"Debdeep Goswami",
+          sex:"male"
         },
         {
           id:4,
-          name:"Balram Singh Rajput"
+          name:"Balram Singh Rajput",
+          sex:"male"
         },
         {
           id:5,
-          name:"Shubham Rana"
+          name:"Shubham Rana",
+          sex:"male"
         },
         {
           id:6,
-          name:"Roshan Sourav"
+          name:"Roshan Sourav",
+          sex:"male"
         },
         {
           id:7,
-          name:"Nitesh Rawal"
+          name:"Nitesh Rawal",
+          sex:"male"
         }
 
       ]
@@ -46,10 +54,13 @@ class App extends Component{
   //}
   
   render(){
+    const {searchField,users}=this.state;
+    const filteredUsers=users.filter(user=>user.name.toLowerCase().includes(searchField.toLowerCase()));
     return(
       <div className="App">
         <HeaderComponent/>
-        <TileList users={this.state.users}/>
+        <input type="search" placeholder="Search users" onChange={e=>{this.setState({searchField:e.target.value})}}/>
+        <TileList users={filteredUsers}/>
       </div>
     );
   }

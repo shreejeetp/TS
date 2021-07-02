@@ -1,0 +1,11 @@
+.UserTile{
+    display: flex;
+    flex-direction: column;
+    background-color: #95dada;
+    border: 1px solid grey;
+    border-radius: 2px;
+    transition: transform 0.25s ease-out;
+}
+.UserTile:hover{
+    transform: scale(1.05);
+}
