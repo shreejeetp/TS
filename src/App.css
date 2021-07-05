@@ -1,0 +1,14 @@
+.postTab{
+    display: inline-block;
+    width:40vw;
+    height: 100vh;
+    border-right: 5px dotted black;
+    margin-left:auto;
+}
+
+.verifyTab{
+    display: inline-block;
+    width:40vw;
+    height: 100vh;
+    margin-right:auto;
+}

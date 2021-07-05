@@ -23,8 +23,8 @@ class App extends Component{
     const posts=this.state.post;
     return(
       <div>
-        <PostTab posts={posts}/>
-        <VerifyTab posts={posts}/>
+        <PostTab className="postTab" posts={posts}/>
+        <VerifyTab className="verifyTab" posts={posts}/>
         <PostControl/>
       </div>
     );
