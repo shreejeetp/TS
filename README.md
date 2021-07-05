@@ -2,3 +2,6 @@
 
 ## React-Porfolio-App
 `react-TS-class` branch
+
+## Sample Posts program to demonstrate Component lifecycle.
+`react-lifecycle`
