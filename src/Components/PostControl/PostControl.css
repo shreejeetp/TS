@@ -1,0 +1,9 @@
+.PostControlBox{
+    position: fixed;
+    right:40vw;
+    bottom:0;
+    background-color: red;
+    padding: 25px;
+    width: 10vw;
+   
+}

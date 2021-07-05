@@ -1,25 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import PostTab from './Components/PostTab/PostTab';
+import { Component } from 'react';
+import PostControl from './Components/PostControl/PostControl';
+import VerifyTab from './Components/VerifyTab/VerifyTab';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+  constructor(){
+    super()
+    this.state={
+      no_of_post:1,
+      post:[{
+        id:0,
+        author:"Shreejeet Praveen",
+        content:"First Post",
+        verified:true
+      }
+      ]
+    }
+
+  }
+  render(){
+    const posts=this.state.post;
+    return(
+      <div>
+        <PostTab posts={posts}/>
+        <VerifyTab posts={posts}/>
+        <PostControl/>
+      </div>
+    );
+  }
 }
 
 export default App;

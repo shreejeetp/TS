@@ -1,0 +1,7 @@
+.postList{
+    width: 85%;
+    display: grid;
+    margin: 25px;
+    grid-template-columns: 1fr;
+    grid-gap:25px
+}
