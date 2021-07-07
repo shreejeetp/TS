@@ -1,0 +1,18 @@
+.toast{
+    position: fixed;
+    bottom:20vh;
+    width: 10%;
+    right:42%;
+    background-color: blueviolet;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease-out;
+}
+
+.visibletrue{
+    visibility: visible;
+}
+
+.visiblefalse{
+    visibility: hidden;
+}

@@ -1,3 +1,9 @@
 .postBox{
     border: 5px solid black;
 }
+
+.buttonGroup{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5px;
+}
