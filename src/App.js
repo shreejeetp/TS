@@ -44,6 +44,7 @@ class App extends Component{
       })
     })
     console.groupEnd("handlePostCreation")
+    this.toggleToast("Post Created!")
   }
   
   deletePost=(id)=>{
@@ -63,11 +64,7 @@ class App extends Component{
     this.toggleToast("Post Deleted!")
   }
 
-  toggleToast=(txt)=>{
-    this.setState({toast:{disp:true,txt:txt}},()=>{
-      //this.setState({toast:{disp:false,txt:""}})
-    })
-  }
+  
   verifyPost=(id)=>{
     this.setState((prevState)=>{
       const newPosts=[]
@@ -83,20 +80,27 @@ class App extends Component{
       })
       return({posts:newPosts})
     })
-    
+    this.toggleToast("Post Verified!")
   }
 
-
+  toggleToast=(txt)=>{
+    this.setState({toast:{disp:true,txt:txt}})
+  }
+  exitToast=()=>{
+    this.setState({toast:{disp:false,txt:""}})
+  }
   fns={deletePost:this.deletePost,verifyPost:this.verifyPost}
   render(){
     console.table(this.state.posts)
     const posts=this.state.posts;
     return(
       <div className="mainApp">
-        <PostTab className="postTab" posts={posts} fns={this.fns}/>
-        <VerifyTab className="verifyTab" posts={posts} fns={this.fns}/>
+        <div className="tab-container">
+          <PostTab className="postTab" posts={posts} fns={this.fns}/>
+          <VerifyTab className="verifyTab" posts={posts} fns={this.fns}/>
+        </div>
         <PostControl handlePostCreation={this.handlePostCreation}/>
-        <ToastNotification toast={this.state.toast}/>
+        <ToastNotification toast={this.state.toast} exitfn={this.exitToast}/>
       </div>
     );
   }

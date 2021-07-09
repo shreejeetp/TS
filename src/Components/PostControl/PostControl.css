@@ -1,9 +1,28 @@
-.PostControlBox{
+.post-control-box-container{
     position: fixed;
-    right:40vw;
-    bottom:0;
+    bottom: 1vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.PostControlBox{
+    display:flex;
     background-color: red;
     padding: 25px;
-    width: 10vw;
-   
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 25vh;
+    width: 25vw;
+}
+
+.author-input{
+    flex: 0 1 auto;
+}
+
+.content-input{
+    flex:1 1 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

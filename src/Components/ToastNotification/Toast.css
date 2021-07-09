@@ -1,18 +1,30 @@
 .toast{
     position: fixed;
-    bottom:20vh;
+    top:10vh;
     width: 10%;
-    right:42%;
+    right:5%;
     background-color: blueviolet;
-    transition-property: all;
-    transition-duration: 2s;
+    transition-property: opacity;
+    transition-duration: 0.5s;
     transition-timing-function: ease-out;
+    
 }
 
 .visibletrue{
     visibility: visible;
+    opacity: 1;
+    
 }
 
 .visiblefalse{
     visibility: hidden;
+    opacity: 0;
+}
+
+.exit-img{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top:10%;
+    right: 5%;
 }
